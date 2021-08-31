@@ -1,0 +1,46 @@
+
+%%%
+%%% set author, title, subtitle, ISBNs here
+%%%
+% if you dont have a subtitle an \mbox{} will do just fine
+\makeatletter
+\author{Ilia Kosenkov}\let\Author\@author
+\authorx{Kosenkov, Ilia}\let\Authorx\@authorx
+\title{High-precision polarimetric, broad-band spectroscopic and temporal studies of black hole X-ray binaries}\let\Title\@title
+\subtitle{\mbox{}}\let\Stitle\@subtitle
+\isbnprint{XXX-XXX-XX-XXXX-X}\let\Isbnprint\@isbnprint
+\isbnweb{XXX-XXX-XX-XXXX-X}\let\Isbnweb\@isbnweb
+\issnprint{XXX-XXX-XX-YYYY-Y}\let\Issnprint\@issnprint
+\issnweb{XXX-XXX-XX-ZZZZ-Z}\let\Issnweb\@issnweb
+\printedat{Printhouse, Turku, Finland, 2021}\let\Printedat\@printedat
+\makeatother
+
+% set language: \finfalse for english \fintrue for finnish
+\finfalse
+
+% set PDF information for PDF/A
+\hypersetup{
+  pdfauthor={\Author},
+  pdftitle={\Title},
+  pdfsubtitle={\Stitle},
+  pdfsubject={Dissertation},
+  pdfkeywords={Some;Key;Words;Here},
+  pdfissn={\Issnprint},
+  pdfeissn={\Issnweb},
+  pdfisbn={\Isbnprint},
+  pdfdisplaydoctitle,
+%  keeppdfinfo, % without this author, keywords, etc. found only in XMP
+  unicode,
+  pdfapart=2,
+  pdfaconformance=B,
+  % pdfrendition={screen},
+}
+\iffin
+\hypersetup{
+  pdflang={fi-FI}
+}
+\else
+\hypersetup{
+  pdflang={en-GB}
+}
+\fi

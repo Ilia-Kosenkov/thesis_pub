@@ -1,0 +1,88 @@
+\documentclass{annales}
+
+% NOTE: quite a bunch of other packages are loaded trough annales class
+% already, so these are just an example of what one might also need
+\usepackage{amssymb,amsthm,amsmath}
+\usepackage[a-2b]{pdfx}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[
+  acronyms,
+  toc,
+  nohypertypes={acronym},
+  nopostdot,
+  nonumberlist
+  ]
+  {glossaries}
+  
+% This should be the last package to include
+% Counts total number of pages and exports \TotPages  
+\usepackage{totpages}
+
+% journal abbreviations used in bibtex base on AAS style
+\input{journals}
+% List of objects
+\input{object_list}
+% This thing contains definitions for \paperXX references 
+% to original pubs using Roman numerals
+\input{paperrefs}
+% Basically first page with title/author and publication info
+\input{metadata}
+% List of abbreviation definitions
+\input{abbreviations}
+
+\newcommand{\mtrx}[1]{\mathbf{#1}}
+% Vector: bold italic
+\newcommand{\vctr}[1]{\boldsymbol{#1}}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\definecolor{ForestGreen}{RGB}{34, 139, 34}
+% \newcommand{\edit}[1]{\textcolor{ForestGreen}{#1}}
+
+\newcommand{\mrm}[1]{\ensuremath{\mathrm{#1}}}
+\newcommand{\dd}{\mrm{d}}
+\newcommand{\fdg}{\mbox{\ensuremath{.\!^\circ}}}
+
+\newcommand{\DP}{\gls{DIPol2}}
+\newcommand{\DUF}{\gls{DIPolUF}}
+\newcommand{\cs}[2]{\mrm{c}^{#1}_{#2}}
+\newcommand{\sn}[2]{\mrm{s}^{#1}_{#2}}
+\newcommand{\mul}{\cdot}
+
+
+
+% Hyperref setup for better links
+% !!!!!!!! Disable/remove for final production
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+\begin{document}
+% just using hyperref to set PDF information, no internal links, etc.
+% !!!!!!!! Enable for final production
+% \begin{NoHyper}
+
+% Dissertation info, supervisors, referees, opponent, abstract acknowledgements, toc, abbreviations, publications
+% other styling things
+\input{frontmatter}
+
+% Main chapters
+\input{introduction}
+\input{black_holes}
+\input{polarization} 
+\input{polarimetry}
+\input{dipol}           
+\input{bh_polarimetry}
+\input{summary}
+\input{future}
+
+% % Setts up references
+\input{biblio}
+
+% Adds full-text publications
+\input{publications}
+
+% \end{NoHyper}
+\end{document}
+

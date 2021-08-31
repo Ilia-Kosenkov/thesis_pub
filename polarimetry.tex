@@ -1,0 +1,96 @@
+\chapter{Measuring polarization of astrophysical sources}
+Polarization is a fundamental property of light, yet it is quite hard to measure, because most of detectors are not sensitive to polarization.
+Stokes parameters $Q$, $U$, and $V$ cannot be easily measured directly, however, there are numerous methods of measuring $I$ -- intensity.
+Polarimetric techniques usually involve i) modulation of the polarized fraction of radiation and ii) measuring the effect of this modulation on the total intensity registered by a detector.
+The relationship between incident radiation $\vctr{S}_\mrm{inc}$ and radiation detected after propagating through an instrument $\vctr{S}_\mrm{det}$ can be conveniently expressed in terms of Mueller calculus:
+\begin{equation}
+    \vctr{S}_\mrm{inc} = \mtrx{M}_\mrm{inst}^{-1} \vctr{S}_\mrm{det},
+\end{equation}
+where $\mtrx{M}_\mrm{inst}$ describes the optical properties of the (ideal) instrument.
+Each element of the optical system can be represented by its own Mueller matrix, $\mtrx{M}_i$, such as
+\begin{equation}
+    \mtrx{M}_\mrm{inst} = \prod\limits_i \mtrx{M}_i.
+\end{equation}
+For the \gls{ONIR} polarimetry, a typical instrument consists of a telescope and \textit{polarimeter} -- a dedicated device which is capable of detecting polarization of the received radiation (usually, either linear, or circular polarization, or both).
+Some elements of the instrument's optical system introduce undesired, potentially variable polarization, which contaminates the incident light, contributing to the \textit{instrumental} polarization.
+
+
+\section{Telescope}
+Telescopes are usually the main source of instrumental polarization, which cannot be eliminated completely.
+Unfortunately, some telescope designs lead to substantial, but also variable instrumental polarization.
+The magnitude of this contaminating polarization depends on, for example, telescope orientation.
+Such instruments significantly complicate polarimetric observations, especially of faint or low-polarization targets.
+
+What is causing disruptive instrumental polarization of the telescopes? 
+As discussed above, one of the main sources of polarization is asymmetry.
+Thus, axisymmetric foci (such as Cassegrain and Gregorian) should exhibit much smaller instrumental polarization compared to non-axisymmetric ones (e.g, Nasmyth or Coud\'{e}, \citealt{Serkowski1974, AstronomicalPolarimetry}).
+Even in a perfectly symmetric optical system instrumental polarization of on-axis image can be caused by the axis-asymmetric imperfections of the mirror surfaces of the telescope, which can never be polished ideally. 
+The magnitude of these effects is relatively small, however in the worst cases instrumental polarization can reach up to 1\%.
+The methods of instrument polarization determination are discussed in Sect.~\ref{sec:data_red}.
+
+
+\section{Polarimeter}
+Polarimeters are instruments of special design that transform and measure incident (un-)polarized radiation.
+Polarimeters typically consist of three principal components: a modulator, an analyzer, and a detector \citep{Serkowski1974,AstronomicalPolarimetry,Berdyugin2019}.
+
+\subsection{Modulators}
+\label{sec:pol:mods}
+Modulation of polarization of the incident radiation is required for accurate optical/near-infrared polarimetry \citep{Serkowski1974,AstronomicalPolarimetry}, and is commonly achieved by introducing a retarder, which creates an additional phase shift between orthogonally polarized components of the radiation.
+Two types of retarders with constant phase shift are widely used: \gls{HWP}, which introduces $\delta = \pi$ phase shift and rotates linear polarization, and \gls{QWP}, which produces $\delta = \pi/2$, transforming circular polarization into linear and vice versa.
+
+Modulators can be separated into three main categories depending on their optical properties: with fixed phase shift, with variable phase shift, and with constant delay but variable optical axis position.
+The fixed phase shift modulators are wave plates made of birefringent crystals, polymers.
+Photoelastic or piezoelectric modulators made of non-birefringent materials, which alter their phase shift magnitude in response to variable external stress, Pockels/Kerr cell-based electro-optic and nematic liquid crystals, susceptible to changes in the applied voltage, are examples of variable phase shift modulators.
+Ferro-electric liquid crystals exhibit variable optical axis position \citep{Berdyugin2019}.
+
+
+\subsection{Analyzers}
+Analyzers are essential for separation of orthogonally linearly polarized light components.
+The simplest analyzers -- polaroids -- are absorptive and exhibit strong absorption of radiation, polarized parallel to the optical axis (polaroid and Nicole prism; \citealt{AstronomicalPolarimetry}).
+Alternatively, one of the linearly polarized light components can be reflected (Glan--Thompson prism).
+They are used in the single-beam polarimeters and allow detectors to measure magnitude of linear polarization of only one orthogonal component at a time.
+The disadvantage of single-beam analyzer is the loss of the half of the incident light intensity.
+
+Two-beam analyzers utilizes the birefringence property of crystals.
+Such crystals have different refractive indices for light polarized perpendicular to the principal direction (ordinary ray) and parallel to that direction (extraordinary ray).
+As a result, the incident radiation is split into two orthogonally polarized rays travelling along slightly different optical paths.
+This property is leveraged in the double-beam analyzers, including plane-parallel calcite plate, Savart plate and Wollaston prism \citep[e.g.,][]{Serkowski1974, AstronomicalPolarimetry,Berdyugin2019}.
+Double-beam analyzers allow simultaneous registration of both orthogonally polarized light beams which is necessary for efficient and high-precision polarimetry.
+
+\subsection{Detectors}
+\label{sec:pol:detectors}
+Detector is the final component of any instrument.
+\gls{ONIR} polarimeters require highly sensitive detectors, such as \gls{EM} \glspl{CCD}, \gls{CMOS}, their combination in the form of \gls{sCMOS}, photo-multipliers and avalanche photo-diodes are all used for \gls{ONIR} polarimetry.
+
+Each detector type has its own advantages and disadvantages. 
+Photo-multipliers and avalanche photo-diodes represent a family of single-cell detectors.
+They are capable of registering fairly large fluxes, retaining nearly-linear response up to 10$^8$ $e\,$s$^{-1}$ \citep{Berdyugin2019}.
+Photo-multipliers show quite low wavelength-dependent \gls{QE} $\sim 10-40\%$ compared to \gls{QE} of avalanche photo-diodes ($\sim 80\%$ in the infrared, however, much lower in optical).
+Both detector technologies allow for extremely fast readout speeds, though avalanche photo-diodes exhibit substantial dark currents, owing to the extra bias voltage, applied to it.
+Thus, detectors of these families are best suited for high-precision/fast polarimetry of bright targets, if paired with a high-frequency (such as photoelastic) modulator.
+
+The \gls{CCD} and \gls{CMOS} detectors represent a family of multi-cell devices.
+They usually consist of grids of many thousands of sensitive elements (pixels), which allows capturing of detailed images of the sky in polarized light at the cost of readout speed.
+The technology behind pixel design significantly limits the maximum flux that can be recorded by a single pixel without contaminating the whole image. 
+If this limit is exceeded, pixel `saturates' excessive charge can `leak' into adjacent pixels, or otherwise be carried over unsaturated pixels, destroying parts of the readout image.
+With higher quantum efficiency and ability to observe the target, surrounding sky, and, possibly, field stars simultaneously on the same detector, \gls{CCD} and \gls{CMOS} are best suited for studying faint objects.
+Low readout speeds are well-paired with slower polarization modulators, such as discretely rotating half-/quarter-wave plates.
+
+\gls{CCD} cameras are well suitable for polarimetry with dual-beam analyzers.
+A \gls{CCD} can simultaneously record both orthogonally polarized images of the star after an analyzer splits incoming radiation into two light rays.
+The plane-parallel calcite also transforms the radiation coming from the sky, superimposing orthogonally polarized images of the sky onto each image of the target. 
+This effectively optically eliminates polarization of the sky and allows polarimetric measurements using simple aperture photometry techniques \citep{Berdyugin2019}.
+The dual-beam \gls{EM} \gls{CCD} polarimeters are widely used and proved to be efficient for various tasks, including monitoring of compact transient objects.
+The notable examples of such polarimeters are RINGO3 \citep{Arnold2012} and its successor \gls{MOPTOP}, \gls{GASP}, \gls{GPP}, DIPol-family polarimeters \DP\ and \DUF.
+There are also multi-mode instruments, among which are \gls{ALFOSC}, \gls{EFOSC}, \gls{FORS}, that support dual-beam \gls{CCD} polarimetry as one of their regimes.
+
+
+
+
+
+
+
+
+
+
+

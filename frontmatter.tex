@@ -1,0 +1,263 @@
+
+%
+% set document language based on our selection in the preamble
+% 
+\iffin
+ \selectlanguage{finnish}
+\else
+ \selectlanguage{english}
+\fi
+
+%
+% Set the following info for title back page, abstracts, etc.
+%
+\faculty{Faculty of Science}{Matemaattis-luonnontieteellinen tiedekunta}
+\dept{Department of Physics and Astronomy}{Fysiikan ja t\"ahtitieteen laitos}
+%\subject{High-energy astrophysics}{Suurenergia-astrofysiikka}
+\subject{Astronomy}{Tähtitiede}
+\programme{Doctoral programme in Physical and Chemical Sciences}{Fysikaalisten ja kemiallisten tieteiden tohtoriohjelma}
+\mnth{June}{Kesäkuu}
+% if you have an image on the book cover uncomment and fill the info
+\coverinfo{ESO/L. Cal\c{c}ada/M.Kornmesser}\imgcovertrue
+
+
+
+%%%
+%%% Title page
+%%%
+\TitlePage{Publication Series information should go here}
+
+%%%
+%%% back of the title page
+%%%
+% parameters: #1 1st supervisor, #2 2nd, #3 1st reviewer, #4 2nd, #5 opponent
+\TitleBack{Prof. Juri Poutanen\\Department of Physics and Astronomy, University of Turku, \\Turku, Finland}
+{Dr. Alexandra Veledina\\Department of Physics and Astronomy, University of Turku, \\Turku, Finland}
+{Doc. Andrei Berdyugin\\Department of Physics and Astronomy, University of Turku, \\Turku, Finland}
+{Assoc. Prof. Emrah Kalemci\\Faculty of Engineering and Natural \\ Sciences, Sabanci University, \\Orhanli-Tulza, Istanbul, Turkey}
+{Dr. Stefano Bagnulo\\Armagh Observatory \& Planetarium, \\College Hill, Armagh, Northern Ireland, United Kingdom}
+{Dr. Eugene Churazov\\Max Planck Institute for Astrophysics, \\Karl-Schwarzchild-Str. 1, \\D-85741 Garching, Germany}
+
+
+%%%
+%%% Dedication can simply be handled as follows
+%%%
+% TODO: update with acknowledgements
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{flushright}
+
+\textit{To my wife Anastasiia}
+\end{flushright}
+\newpage
+
+
+%%%
+%%% Abstracts both in english and finnish
+%%%
+% the order should be such that the 1st one corresponds to the language
+% of the dissertation. Remember to turn on/off the "second language"
+% before and after the 2nd abstract.
+\begin{abstract}
+    Black holes are among the most unusual objects in the Universe.
+    Powered through accretion, they are strong sources of radiation in a broad energy range, from radio to hard X-rays.
+    Stellar-mass black holes manifest themselves in binary systems, when their companion star -- main sequence or giant -- starts to lose matter, which is then captured and accreted by the black hole.
+
+    Accreting black hole binaries are complex systems.
+    We observe emission from multiple components, such as accretion disc, hot accretion flow (corona), jet, and even donor star.
+    A large number of accreting black holes are transient sources -- they undergo periods of violent activity, increasing luminosity by several orders of magnitude.
+    Throughout the course of an active phase -- an outburst -- the spectral energy distribution and relative contribution of each component can change dramatically, resulting in a gradual evolution of the observed spectra of the black hole binary transient.
+    
+    In the first part of the thesis I describe the nature of the black hole binaries, focusing on the emission mechanisms. 
+    Using the archival photometric data of \GX\ I demonstrate how observed optical and infrared spectral properties of the source can be explained with a three-component jet, hot flow and accretion disc model.
+           
+    In the second part I discuss polarization mechanisms.
+    Polarization is a fundamental property of light and it carries information about the geometrical structure of the source and scattering or polarizing media.
+    I review processes that can produce polarized (or polarize unpolarized) radiation in the accreting black hole binaries and interstellar medium.
+    
+    In the third part I introduce the novel optical polarimeter (DIPol-UF), which was built in Tuorla Observatory as part of an international collaboration.
+    I outline the challenges of remotely operating high-precision polarimeter and describe the control software that I developed specifically for this instrument.
+
+    Finally, I discuss the properties of intrinsic polarization of low-mass X-ray binaries based on polarimetric data of \VCYG\ and \MAXI.
+    Both objects showed small and variable intrinsic polarization during an outburst, with polarization angle coinciding with jet position angle.
+    I demonstrate how high-precision polarimetry can augment photometric and timing studies of X-ray binaries, shedding more light onto the nature of optical emission in these objects.
+    
+
+\mbox{}\\\noindent
+KEYWORDS: polarization, accretion, black hole binaries
+\end{abstract}
+
+\fintrue % turn on finnish temporarily
+\begin{abstract}
+    Mustat aukot ovat eräitä maailmankaikkeuden epätavallisimmista kohteista. 
+    Aineen kertymisen vuoksi ne ovat voimakkaita säteilyn lähteitä laajalla energiavälillä radioaalloista röntgensäteisiin. 
+    Tähtienmassaiset mustat aukot ilmenevät kaksoistähti-järjestelmissä, kun niiden pääsarja- tai jättiläisvaiheessa oleva kumppanitähti alkaa luovuttamaan ainetta, joka kertyy mustaan aukkoon.
+
+    Kerryttävän mustan aukon sisältävät kaksoistähdet ovat monimutkaisia järjes-telmiä.
+    Havaitsemme säteilyä useista lähteistä, kuten kertymäkiekosta, kuumasta kertymävirtauksesta, suihkusta ja jopa kumppanitähdestä. 
+    Useat kerryttävät mustat aukot ovat ajoittain havaittavia kohteita: Ne käyvät läpi väkivaltaisia jaksoja, jolloin niiden kirkkaus kasvaa usealla kertaluokalla.
+    Koko aktiivisen ajan, eli purkauksen ajan, energian spektrijakauma ja sen jokaisen komponentin suhteellinen osuus voi vaihdella hurjasti, mikä johtaa musta aukko -kaksoisjärjestelmän havaitun spektrin asteittaiseen muuttumiseen.
+
+    Väitöskirjan ensimmäisessä osassa kuvaan mustan aukon sisältävien kaksoistähti-järjestelmien luonnetta keskittyen säteilymekanismeihin. 
+    Käyttäen arkistoituja fotometrisiä havaintoja kohteesta \GX\ osoitan kuinka havaittu optinen ja infrapunaspektri voidaan selittää kolmen komponentin mallilla, joka koostuu suihkusta, kuumasta virtauksesta ja kertymäkiekosta.
+
+    Toisessa osassa käsittelen polarisaatiomekanismeja. 
+    Polarisaatio on valon perustavanlaatuinen ominaisuus, ja se sisältää tietoa kohteen geometrisestä rakenteesta sekä sirottavasta ja polarisoivasta väliaineesta. 
+    Käyn läpi prosesseja, jotka voivat tuottaa polarisoitunutta säteilyä (tai polarisoida polarisoitumatonta sellaista) kerryttä-vissä musta aukko -kaksoisjärjestelmissä tai tähtienvälisessä aineessa.
+
+    Kolmannessa osassa esittelen uuden optisen polarimetrin (DIPol-UF), joka rakennettiin Tuorlan Observatoriossa osana kansainvälistä yhteistyötä. 
+    Hahmottelen erittäin tarkan polarimetrin kaukokäyttöön liittyviä haasteita ja kuvailen tälle laitteelle kehittämääni ohjausohjelmistoa.
+
+    Lopuksi käyn läpi pienimassaisten röntgenkaksoistähtien luontaisen polarisaation ominaisuuksia perustuen polarimetrisiin havaintoihin kohteista \VCYG\ ja \MAXI. 
+    Molemmat kohteet osoittavat pientä ja vaihtelevaa luontaista polarisaatiota purkauksen aikana siten, että polarisaatiokulma sopii yhteen suihkun sijaintikulman kanssa. 
+    Osoitan kuinka erittäin tarkka polarimetria voi olla lisänä röntgenkaksoistähtien fotometrialle ja ajoitustutkimuksille valaisten lisää näiden kohteiden optisen säteilyn luonnetta. 
+
+\mbox{}\\\noindent
+ASIASANAT: polarisaatio, kertyminen, musta aukko, kaksoistähti
+\end{abstract}
+\finfalse % turn off finnish
+
+%%%
+%%% Acknowledgements is also without a number
+%%%
+% TODO: Acknowledgements
+
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\thispagestyle{plain}
+I started this journey almost six years ago, when I decided that life without scientific exploration and challenge is not for me.
+The path was long and difficult, but the outcome is exciting and satisfying.
+Throughout my journey I found myself surrounded by people who supported me.
+
+First of all, I owe my deepest gratitude to my supervisors, Prof. Juri Poutanen, Dr. Alexandra Veledina, Doc. Andrei Berdyugin.
+They shaped me as a researcher, guided me through the early stages of my career, and provided support that is invaluable for a student.
+This thesis would not be possible without them.
+
+I am grateful to Assoc. Prof. Emrah Kalemci and Prof. Stefano Bagnulo for rigorous pre-examination of my thesis.
+Their feedback and comments helped me to improve my work.
+I thank Dr. Eugene Churazov for agreeing to become my esteemed opponent.
+
+I would like to extend my gratitude to my collaborators, who influenced and contributed to the research presented in this thesis.
+I am grateful to all of my co-authors, including Sergey Tsygankov, Vilppu Piirola, Valery Suleimanov and Svetlana Berdyugina.
+This work would not be possible without the support provided by the University of Turku and Leibniz Institute for Solar Physics.
+I am grateful to NORDITA KTH and NOT for research opportunities.
+
+I would like to also thank my partners-in-crime, PhD students with whom I shared my path: Joonas, Anna, Tuomo, Vadim, Vlad, Juhani, Armin, Yasir.
+Some of them inspired and taught me, some of them, I hope, drew inspiration and learned something from me.
+I am also grateful to Pavel and Roberto.
+All of them helped me grow both as a student and as a researcher.
+I am tankful to the members of Tuorla Observatory (and FINCA), who welcomed and accepted me.
+
+My life would have been much more difficult without my friends.
+With some of them we share almost 20 years of history.
+I am grateful to Sergey, Artyom, Semyon, Pavel and Natasha.
+
+Even though we were separated by a great distance, I never felt lonely during these years.
+My family, my mother Tamara and stepfather Gennadii, my grandmother Zinaida provided much needed support during my highs and lows. 
+\fontencoding{T2A}\selectfont
+Спасибо вам за всё!
+\fontencoding{T1}\selectfont
+
+I am deeply grateful to my wife Anastasiia for her love and understanding.
+I walked this path knowing she is there for me and that I cannot let her down.
+
+\mbox{}\\[2\baselineskip]
+\begin{flushright}
+17.08.2021 \\
+\textit{\Author}
+\end{flushright}
+%
+% optional author introduction box 
+%
+% TODO : Should we use it?
+% \vfill %this will put the box at the bottom of the page
+% \begin{infobox}{images/authorimage.png}
+% \end{infobox}
+\mbox{}\newpage
+
+
+%%%
+%%% ToC, automatically renamed based on selected language
+%%%
+\iffin
+\def\contentsname{Sisällys}
+\else
+\def\contentsname{Table of Contents}
+\fi
+\tableofcontents
+
+%%%
+%%% Abbreviations is without a number
+%%%
+% \iffin
+% \chapter*{Lyhenteet}
+% \addcontentsline{toc}{chapter}{Lyhenteet}
+% \else
+% \chapter*{Abbreviations}
+% \addcontentsline{toc}{chapter}{Abbreviations}
+% \fi
+% 
+% your abbrevs should go here, as an example we'll use the entry environment
+%
+% \begin{entry}{ARRLA} %parameter is the widest label
+% \item[AA] An Abbreviation
+% \item[ARRLA] A Really Really Long Abbreviation
+% \item[SS] Something something
+% \end{entry}
+{
+\glssetwidest{WATCHDOGM}
+% \footnotesize
+\iffin
+\printnoidxglossary[
+    style=alttree,
+    title=Lyhenteet,
+    toctitle=Lyhenteet, 
+    sort=word, 
+    type=\acronymtype
+]
+\else
+\printnoidxglossary[
+    style=alttree,
+    title=Abbreviations,
+    toctitle=Abbreviations, 
+    sort=word, 
+    type=\acronymtype
+]
+\fi
+}
+%%%
+%%% List of Publications is also without a number
+%%%
+\iffin
+\chapter*{Artikkelit}
+\addcontentsline{toc}{chapter}{Artikkelit}
+\else
+\chapter*{List of Original Publications}
+\addcontentsline{toc}{chapter}{List of Original Publications}
+\fi
+This dissertation is based on the following original publications, which
+are referred to in the text by their Roman numerals:
+
+% ADS custom format is %g\\\\ %T.\\\\ %J, %Y; %V: %p.\n
+% The template is:
+% \item[I] Author(s) of the publication. Full title of the publication. Journal, publishing ear; issue number: pages.
+\begin{entry}{III} % the parameter is the widest label
+    \item[I] Piirola V., \textit{Kosenkov I. A.}, Berdyugin A. V., Berdyugina S. V., Poutanen J. \\ Double Image Polarimeter—Ultra Fast: Simultaneous Three-color ($BVR$) Polarimeter with Electron-multiplying Charge-coupled Devices.\\ 2021, The Astronomical Journal, 161, 20
+    \item[II] \textit{Kosenkov I. A.}, Berdyugin A. V., Piirola V., Tsygankov S. S., Pall\'e E., Miles-P\'aez P. A., Poutanen J.\\ High-precision optical polarimetry of the accreting black hole \VCYG\ during the 2015 June outburst.\\ 2017, Monthly Notices of the Royal Astronomical Society, 468, 4362
+    \item[III] Veledina A., Berdyugin A. V., \textit{Kosenkov I. A.}, Kajava J. J. E.,\\ Tsygankov S. S., Piirola V., Berdyugina S. V., Sakanoi T., Kagitani M., Kravtsov V., Poutanen J.\\ Evolving optical polarisation of the black hole X-ray binary \MAXI.\\ 2019, Astronomy and Astrophysics, 623, A75
+    \item[IV] \textit{Kosenkov I. A.}, Veledina A., Berdyugin A. V., Kravtsov V., Piirola V., Berdyugina S. V., Sakanoi T., Kagitani M., Poutanen J.\\ Disc and wind in black hole X-ray binary \MAXI\ observed through polarized light during its 2018 outburst.\\ 2020, Monthly Notices of the Royal Astronomical Society, 496, L96
+    \item[V] \textit{Kosenkov I. A.}, Veledina A., Suleimanov V. F., Poutanen J.\\ Colors and patterns of black hole X-ray binary \GX.\\ 2020, Astronomy and Astrophysics, 638, A127
+    \item[VI] \textit{Kosenkov I. A.}, Veledina A.\\ Superhump period of the black hole X-ray binary \GX.\\ 2018, Monthly Notices of the Royal Astronomical Society, 478, 4710
+\end{entry}
+\clearpage
+
+\iffin
+\section*{List of publications not included in the thesis}
+\else
+\section*{List of publications not included in the thesis}
+\fi
+\begin{entry}{III}
+    \item[] Kravtsov V., Berdyugin A. V., Piirola V., \textit{Kosenkov I. A.}, Tsygankov S. S., Chernyakova M., Malyshev D., Sakanoi T., Kagitani M., Berdyugina S. V., Poutanen J.\\ Orbital variability of the optical linear polarization of the $\gamma$-ray binary \LSI\ and new constraints on the orbital parameters.\\ 2020, Astronomy and Astrophysics, 643, A170
+\end{entry}
+
+% \noindent The list of publications has been reproduced with the permission of the copyright holders.

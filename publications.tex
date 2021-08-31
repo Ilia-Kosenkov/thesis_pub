@@ -1,0 +1,55 @@
+%%%
+%%% Original Publications
+%%%
+% empty pagestyle from now on; 1st page of each chapter uses plain
+% pagestyle so lets redefine that as well
+\pagestyle{empty}
+\fancypagestyle{plain}{
+  \renewcommand{\headrulewidth}{0 pt}
+  \fancyhead{}
+  \fancyfoot{}
+}
+
+% start on the right
+\cleardoublepage
+\iffin
+\chapter*{Alkuperäisjulkaisut}
+\addcontentsline{toc}{chapter}{Alkuperäisjulkaisut}
+\else
+\chapter*{Original Publications}
+\addcontentsline{toc}{chapter}{Original Publications}
+\fi
+% Turn on side tabs
+\AddTabs
+
+% ADS custom template : \\origpub{%g}{%T}{%Y, %J, %V, %pp}\n
+% ADS template for export" %g\n%T\n%J, %Y, %V, %pp, %d
+% #1 Author(s), #2 Title/w subtitle, #3 e.g. journal info.
+% \origpub{Firstname Lastname \& Firstname Lastname}{Title: subtitle of
+%   the article}{Name of the journal, vol(nro), year, page numbers}
+% #1 filename, #2 number of pages
+
+
+% I. DIPol-UF
+\origpub{Piirola V., Kosenkov I. A., Berdyugin A. V., Berdyugina S. V., Poutanen J.}{Double Image Polarimeter—Ultra Fast: Simultaneous Three-color ($BVR$) Polarimeter with Electron-multiplying Charge-coupled Devices}{2021, The Astronomical Journal, 161, 20}
+\insertpub{papers/I.pdf}{9}
+
+% II. V404 Cyg
+\origpub{Kosenkov I. A., Berdyugin A. V., Piirola V., Tsygankov S. S., Pall\'e E., Miles-P\'aez P. A., Poutanen J.}{High-precision optical polarimetry of the accreting black hole \VCYG\ during the 2015 June outburst}{2017, Monthly Notices of the Royal Astronomical Society, 468, 4362-4373}
+\insertpub{papers/II.pdf}{12}
+
+% III. MAXI by Sasha
+\origpub{Veledina A., Berdyugin A. V., Kosenkov I. A., Kajava J. J. E., Tsygankov S. S., Piirola V., Berdyugina S. V., Sakanoi T., Kagitani M., Kravtsov V., Poutanen J.}{Evolving optical polarisation of the black hole X-ray binary \MAXI}{2019, Astronomy and Astrophysics, 623, A75}
+\insertpub{papers/III.pdf}{11}
+
+% IV. MAXI J1820+070
+\origpub{Kosenkov I. A., Veledina A., Berdyugin A. V., Kravtsov V., Piirola V., Berdyugina S. V., Sakanoi T., Kagitani M., Poutanen J.}{Disc and wind in black hole X-ray binary \MAXI\ observed through polarized light during its 2018 outburst}{2020, Monthly Notices of the Royal Astronomical Society, 496, L96-L100}
+\insertpub{papers/IV.pdf}{5}
+
+% V. GX339-4
+\origpub{Kosenkov I. A., Veledina A., Suleimanov V. F., Poutanen J.}{Colors and patterns of black hole X-ray binary \GX}{2020, Astronomy and Astrophysics, 638,  A127}
+\insertpub{papers/V.pdf}{18}
+
+% VI. GX339-4 superhumps
+\origpub{Kosenkov I. A., Veledina A.}{Superhump period of the black hole X-ray binary \GX}{2018, Monthly Notices of the Royal Astronomical Society, 478,  4710-4719}
+\insertpub{papers/VI.pdf}{10}
