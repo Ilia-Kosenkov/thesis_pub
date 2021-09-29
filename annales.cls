@@ -447,7 +447,7 @@
   \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=south west,minimum width=176mm,minimum
     height=34mm,fill=black!75,text=white] (RB) at (current page.south
-    west){\fontsize{9}{11}\bfseries\selectfont\parbox[c]{\textwidth}{\centering
+    west){\fontsize{9}{11}\bfseries\selectfont\parbox[c]{166mm}{\centering
         TURUN YLIOPISTON JULKAISUJA -- ANNALES UNIVERSITATIS
         TURKUENSIS\\\MakeUppercase{#1}
       }};
@@ -456,7 +456,7 @@
   \newpage
 }
 
-\newcommand{\Leaflet}[2]{%
+\newcommand{\Leaflet}[3]{%
   \thispagestyle{empty}
   \begin{center}
     \mbox{}\\[-32pt]
@@ -479,22 +479,28 @@
     \end{center}
   }
   % \vspace*{\fill}
-  \vfill
+  %\vfill
+  \vspace{0.25cm}
   \begin{center}
-    \parbox[c]{\textwidth}{
+    \parbox[t]{\textwidth}{
       \fontfamily{phv}\fontsize{14}{16}\bfseries\selectfont
       \centering
       \iffin AKATEEMINEN VÄITÖSKIRJA \else ACADEMIC
         DISSERTATION \fi\\[\baselineskip]
-      \fontfamily{phv}\fontsize{12}{14}\mdseries\selectfont
-    #2
-  }
+    }
   \end{center}
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=west] at (-2, -1)  {\parbox[c]{0.95\textwidth}{
+      \raggedleft\fontfamily{phv}\fontsize{12}{14}\mdseries\selectfont
+          #2 
+        }};
+    \node[anchor=west] at (11, -1) {\includegraphics[keepaspectratio, width = 0.25\textwidth]{#3}};
+  \end{tikzpicture}
   \vfill
   \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=south west,minimum width=176mm,minimum
     height=34mm,fill=black!75,text=white] (RB) at (current page.south
-    west){\fontsize{9}{11}\bfseries\selectfont\parbox[c]{\textwidth}{\centering
+    west){\fontsize{9}{11}\bfseries\selectfont\parbox[c]{166mm}{\centering
         TURUN YLIOPISTON JULKAISUJA -- ANNALES UNIVERSITATIS
         TURKUENSIS\\\MakeUppercase{#1}
       }};
