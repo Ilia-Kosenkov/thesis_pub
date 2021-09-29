@@ -1,6 +1,7 @@
 # Thesis
 ## High-precision polarimetric, broad-band spectroscopic and temporal studies of black hole X-ray binaries
 
+[In library of the University of Turku](https://www.utupub.fi/handle/10024/152618)
 ### Abstract
 
 Black holes are among the most unusual objects in the Universe.
